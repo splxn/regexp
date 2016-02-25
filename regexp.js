@@ -26,8 +26,7 @@ function regEqualPhone(item, array) {
   console.log('Testing ' + array);
   console.log('RegExp == ' + item);
   for (var i in array) {
-    var pureItem = array[i].replace(/[\(\)\s\-]/g, '');
-    console.log(pureItem);
+    var pureItem = array[i].replace(/[^\d\+]/g, '');
     console.log(array[i] + ' => ' + item.test(pureItem));
   }
 }
