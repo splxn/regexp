@@ -1,6 +1,6 @@
 //reqular expressions for email, date, tags, phone
 var email = /\b.+@[a-zA-Z]+\.[a-zA-Z]{2,3}\b/i;
-var date = /^(?![a-zA-Z])\d{1,2}\s[a-zA-Z]{4,8}\s\d{4}$/;
+var date = /^\d{1,2}\s[a-zA-Z]{4,8}\s\d{4}$/;
 var tags = /<.+>.+<\/.+>/i;
 var phone = /^\(?(\+380)\d{2}\)?\d{7}$/;
 
@@ -26,7 +26,8 @@ function regEqualPhone(item, array) {
   console.log('Testing ' + array);
   console.log('RegExp == ' + item);
   for (var i in array) {
-    var pureItem = array[i].replace(/[\s\-]/g, '');
+    var pureItem = array[i].replace(/[\(\)\s\-]/g, '');
+    console.log(pureItem);
     console.log(array[i] + ' => ' + item.test(pureItem));
   }
 }
