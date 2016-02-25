@@ -2,7 +2,7 @@
 var email = /\b.+@[a-zA-Z]+\.[a-zA-Z]{2,3}\b/i;
 var date = /^\d{1,2}\s[a-zA-Z]{4,8}\s\d{4}$/;
 var tags = /<.+>.+<\/.+>/i;
-var phone = /^\(?(\+380)\d{2}\)?\d{7}$/;
+var phone = /^(\+380)\d{9}$/;
 
 //arrays of emails, date, tags and phones
 var emailArr = ['abc@mail.ru', '123@gmail.com', 'GGG@i.ua', 'blablabla', 'aaa@1111.com'];
